@@ -1,0 +1,50 @@
+.content {
+  min-width:800px;
+  max-width:1400px;
+  width:80%;
+  position:relative;
+  margin:0 auto;
+  margin-top: 4em;
+}
+
+.main-form
+{
+margin-top: 2em;
+}
+
+.main-form div{
+margin-bottom: 2px;
+}
+
+.main-form div .url input{
+width: 19em;
+}
+
+.main-form div .email input{
+width: 10em;
+}
+
+.main-form div label{
+width: 3.5em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+/*margin-top: 0.2em;*/
+}
+
+.submit input
+{
+margin-left: 4.5em;
+}
+
+.vanadium-invalid
+{
+color: red;
+}
+
+.info
+{
+margin-top: 3em;
+width: 20em;
+color: #666;
+}
