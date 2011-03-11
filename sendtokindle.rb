@@ -2,9 +2,18 @@ require 'sinatra'
 require 'pony'
 require 'open-uri'
 
+def get_name(url)
+	name = url.scan(/[^\/]*$/)[0]
+	if name=~/\./
+		name
+	else
+		"name.pdf"
+	end
+end
+
 def send_email(url, email)
 	open(url) do |f|
-		filename = "file.pdf"#f.path
+		filename = get_name(url)
 
 		Pony.mail(:to => email, 
 		:from => 'Send To Kindle',
