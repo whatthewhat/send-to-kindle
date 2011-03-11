@@ -7,7 +7,7 @@ def get_name(url)
 	if name=~/\./
 		name
 	else
-		"name.pdf"
+		name + '.pdf'
 	end
 end
 
