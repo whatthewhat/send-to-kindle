@@ -1,2 +1,2 @@
-require 'sendtokindle'
-run Sinatra::Application
+require './sendtokindle'
+run SendToKindle
