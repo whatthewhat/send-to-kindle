@@ -1,6 +1,6 @@
 require 'sinatra/base'
-require './lib/emailstuff'
 require 'open-uri'
+Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 
 class SendToKindle < Sinatra::Base
 	include EmailStuff
