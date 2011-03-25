@@ -1,22 +1,11 @@
 require 'sinatra/base'
-require 'open-uri'
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 
 class SendToKindle < Sinatra::Base
 	include EmailStuff
-	set :public, './public/'
+	include UrlStuff
 	
-	helpers do
-		# Provide a file name from the file url
-		def get_name(url)
-			name = url.scan(/[^\/]*$/)[0]
-			if name=~/\./
-				name
-			else
-				name + '.pdf'
-			end
-		end
-	end
+	set :public, './public/'
 
 	get '/' do
 
