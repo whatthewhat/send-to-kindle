@@ -1,16 +1,26 @@
 <form class="main-form" method="get" action="/send">
-	<div>
-		<label for="url">File URL</label>
-		<span class="url"><input class=":required :only_on_submit" type="text" name="url" /></span>
+	<div class="form_item">
+		<label for="url">
+			File URL
+		</label>
+		<div class="url">
+			<input class=":required :only_on_submit" type="text" name="url" />
+		</div>
 	</div>
-	<div>
-		<label for="email">Email</label>
-		<span class="email"><input class=":required :only_on_submit" type="text" name="email" /></span><b>@free.kindle.com</b>
+	<div class="form_item">
+		<label for="email">
+			Email
+		</label>
+		<div class="email">
+			<input class=":required :only_on_submit" type="text" name="email" />
+			<strong>@free.kindle.com</strong>
+		</div>
 	</div>
 	<div class="submit">
 		<input type="submit" value="Send" />
 	</div>
 </form>
-<div class="info">
-	To be able to receive documents on your Kindle you need to add <b>email.to.kindle@gmail.com</b> to your Kindle approved email list.
-</div>
+<footer>
+	To be able to receive documents on your Kindle you need to add
+	<strong>email.to.kindle@gmail.com</strong> to your Kindle approved email list.
+</footer>
