@@ -24,4 +24,8 @@ class SendToKindle < Sinatra::Base
 			erb :send
 		end
 	end
+	
+	error do
+		"Sorry, something went wrong..."
+	end
 end
