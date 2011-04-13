@@ -5,7 +5,7 @@ Small Sinatra app, sends files to @free.kindle.com accounts.
 
 Test app
 ------------
-(http://sendtokindle.heroku.com) -- `http://sendtokindle.heroku.com`
+[http://sendtokindle.heroku.com](http://sendtokindle.heroku.com)
 
 Usage
 ------------
