@@ -1,13 +1,17 @@
+require 'yaml'
 require 'sinatra/base'
-Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
+require './lib/emailer.rb'
 
 class SendToKindle < Sinatra::Base
-	include EmailStuff
-	include UrlStuff
+  
+  configure do  
+    email_config = YAML.load_file("config/email.yml")
+    @@emailer = Emailer.new(email_config)
+    
+    set :public, './public/'
+  end	
 	
-	set :public, './public/'
-
-	get '/' do
+  get '/' do
 
 		erb :index
 	end
@@ -20,7 +24,7 @@ class SendToKindle < Sinatra::Base
 			redirect '/'
 		else
 			@email = @email.chomp + '@free.kindle.com' unless @email=~/@/
-			send_email(@url, @email)
+			@@emailer.send_email(@url, @email)
 			erb :send
 		end
 	end

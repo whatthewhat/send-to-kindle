@@ -36,3 +36,6 @@ Thumbs.db
 # scripts (for now)#
 ####################
 *.js
+
+####################
+.redcar
